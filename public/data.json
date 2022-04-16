@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Balance Body Mind",
+        "price": "$100.00",
+        "description": "How we dream about out future",
+        "img": "https://ibb.co/db2hFMW"
+    },
+    {
+        "id": 2,
+        "name": "Physical Activity",
+        "price": "$100.00",
+        "description": "How we dream about out future",
+        "img": "https://ibb.co/zrB6k6N"
+    },
+    {
+        "id": 3,
+        "name": "Support & Motivation",
+        "price": "$100.00",
+        "description": "How we dream about out future",
+        "img": "https://ibb.co/pjj2mfZ"
+    }
+]
