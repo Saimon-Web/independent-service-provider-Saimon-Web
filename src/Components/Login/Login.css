@@ -2,5 +2,21 @@
     display: block;
     padding: 10px 5px;
     width: 100%;
+}
 
+.form-fill {
+    width: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .form-fill {
+        width: 100%;
+    }
+
+    .form input {
+        display: block;
+        padding: 10px 5px;
+        width: 100%;
+    }
 }

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
 import GoogleSign from '../GoogleSign/GoogleSign';
+import './Register.css'
 
 const Register = () => {
     const navigate = useNavigate();
@@ -29,7 +30,7 @@ const Register = () => {
     }
     return (
         <div>
-            <div className='container mx-auto w-50 mb-5'>
+            <div className='container form-fill mb-5'>
                 <h1 className='text-success mb-3'>Register</h1>
                 <form action="" className='form ' onSubmit={HandleRegister}>
 
