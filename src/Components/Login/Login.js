@@ -51,7 +51,7 @@ const Login = () => {
                 <input className='mb-3' type="email" name="email" placeholder='Enter Email' id="" />
                 <input className='mb-3' type="password" name="password" placeholder='Enter Password' id="" />
                 <input className='btn btn-success' type="submit" value="Login" />
-                <p className='text-danger'>{error?.message} || {error1?.message}</p>
+                <p className='text-danger'>{error?.message}</p>
 
             </form>
             <GoogleSign></GoogleSign>

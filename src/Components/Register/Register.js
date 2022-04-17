@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
+import GoogleSign from '../GoogleSign/GoogleSign';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -39,6 +40,7 @@ const Register = () => {
 
                     <p className='text-danger'>{error?.message}</p>
                 </form>
+                <GoogleSign></GoogleSign>
             </div>
 
         </div>
