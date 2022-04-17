@@ -1,6 +1,27 @@
-.heading {
-    z-index: 5;
+.text-info {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
-.text-info {}
+.heading {
+    font-size: 70px;
+}
+
+.card-text {
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .card-text {
+        font-size: 16px;
+    }
+
+}

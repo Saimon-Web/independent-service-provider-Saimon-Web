@@ -21,6 +21,9 @@ const Header = () => {
                 <Navbar.Toggle className='color' aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
+                        <Nav.Link as={Link} to="/"  >Home</Nav.Link>
+                        <Nav.Link as={Link} to="blogs"  >Blogs</Nav.Link>
+                        <Nav.Link as={Link} to="about"  >About</Nav.Link>
                         {
                             user ? <Nav.Link as={Link} to="login" onClick={handleSignout}  >signout</Nav.Link> :
 
@@ -28,11 +31,6 @@ const Header = () => {
                                     <Nav.Link as={Link} to="login">Log in</Nav.Link>
                                     <Nav.Link as={Link} to="register">Register</Nav.Link>
                                 </div>
-
-
-
-
-
                         }
 
                     </Nav>

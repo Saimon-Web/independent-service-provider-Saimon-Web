@@ -16,9 +16,9 @@ const GoogleSign = () => {
     return (
         <div>
             <div className='d-flex align-items-center'>
-                <div className='line bg-primary w-50 '></div>
+                <div className='line bg-success w-50 '></div>
                 <p className='mt-2 '>or</p>
-                <div className='line bg-primary w-50 '></div>
+                <div className='line bg-success w-50 '></div>
             </div>
             <button className='btn btn-success' onClick={() => signInWithGoogle()}>Continue with Google</button>
             <p className='text-danger'>{errorElement}</p>
