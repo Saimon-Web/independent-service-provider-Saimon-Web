@@ -1,8 +1,6 @@
 .heading {
-    color: blue;
+    z-index: 5;
 
 }
 
-.text-info {
-    margin-left: -200px;
-}
+.text-info {}

@@ -1,33 +1,49 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import logo from '../../images/logo.png'
+import { Link } from 'react-router-dom';
+import './Header.css'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+    const handleSignout = () => {
+        signOut(auth);
+    }
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid">
-                <Nav.Link className="navbar-brand" to="#">
+        <Navbar collapseOnSelect expand="lg" bg="light">
+            <Container>
+                <Navbar.Brand as={Link} to="/">
                     <img src={logo} alt="" />
-                </Nav.Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                            <Nav.Link className="nav-link active" aria-current="page" to="#">Home</Nav.Link>
-                        </li>
-                        <li className="nav-item">
-                            <Nav.Link className="nav-link" to="#">Link</Nav.Link>
-                        </li>
+                </Navbar.Brand>
+                <Navbar.Toggle className='color' aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="ms-auto">
+                        {
+                            user ? <Nav.Link as={Link} to="login" onClick={handleSignout}  >signout</Nav.Link> :
+
+                                <div className='d-lg-flex'>
+                                    <Nav.Link as={Link} to="login">Log in</Nav.Link>
+                                    <Nav.Link as={Link} to="register">Register</Nav.Link>
+                                </div>
 
 
-                    </ul>
 
-                </div>
-            </div>
-        </nav>
+
+
+                        }
+
+                    </Nav>
+
+                </Navbar.Collapse>
+            </Container>
+        </Navbar >
     );
 };
 
 export default Header;
+
+
+
